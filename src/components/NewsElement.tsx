@@ -6,13 +6,15 @@ interface NewsElementProps {
 const NewsElement = (props: NewsElementProps) => {
   return (
     <div className='d-block'>
-      <h5>NUOVA STAZIONE RADIO</h5>
-      <p>{props.description}</p>
+      <h6 className='newsElementTitle text-secondary m-0'>
+        NUOVA STAZIONE RADIO
+      </h6>
+      <p className='newsElementDescription mb-4'>{props.description}</p>
       <img
         src={props.imgUrl}
         alt='radio poster'
-        className=' rounded-5'
-        width={'450px'}
+        className='newsElementImg rounded-5'
+        width={'520px'}
       />
     </div>
   );

@@ -5,15 +5,15 @@ import { ChevronRight } from 'react-bootstrap-icons';
 const NewEpisodesSection = () => {
   return (
     <Container className='mt-4'>
-      <h2>
-        Nuovi episodi radio <ChevronRight />
-      </h2>
+      <h5 className='mb-2 d-flex align-items-baseline'>
+        Nuovi episodi radio <ChevronRight className='h6 ms-2' />
+      </h5>
 
       <Row xs={3} lg={5}>
         <Col>
           <NewEpisodeElement
             imgUrl='../../public/assets/images/2a.png'
-            description='Pròlogo con Abuelo'
+            description='Prólogo con Abuelo'
             isExplicit={true}
           />
         </Col>

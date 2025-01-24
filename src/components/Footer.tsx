@@ -2,28 +2,36 @@ import { Container } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <Container as={'footer'}>
-      <div>
-        <span>
+    <Container as={'footer'} className='py-3 px-4'>
+      <div className='mb-3'>
+        <span className='d-inline-block border-end border-secondary border-opacity-50 pe-3 me-2'>
           <span>Italia</span>
         </span>
-        <span>
-          <span>English (UK)</span>
+        <span className='ms-1'>
+          <span className='special'>English (UK)</span>
         </span>
       </div>
 
-      <div>
-        <p className='m-0'>
-          Copiright &copy; <b>Apple Inc.</b> Tutti i diritti riservati.
+      <div className='mb-2'>
+        <p className='special m-0'>
+          Copiright &copy; 2024 <b>Apple Inc.</b> Tutti i diritti riservati.
         </p>
       </div>
 
       <div>
-        <span>Condizioni dei servizi internet</span>
-        <span>Apple Music e privacy</span>
-        <span>Avviso sui cookie</span>
-        <span>Supporto</span>
-        <span>Feedback</span>
+        <span className='special d-inline-block border-end border-secondary border-opacity-50 pe-2 me-2'>
+          Condizioni dei servizi internet
+        </span>
+        <span className='special d-inline-block border-end border-secondary border-opacity-50 pe-2 me-2'>
+          Apple Music e privacy
+        </span>
+        <span className='special d-inline-block border-end border-secondary border-opacity-50 pe-2 me-2'>
+          Avviso sui cookie
+        </span>
+        <span className='special d-inline-block border-end border-secondary border-opacity-50 pe-2 me-2'>
+          Supporto
+        </span>
+        <span className='special d-inline-block pe-2 me-2'>Feedback</span>
       </div>
     </Container>
   );

@@ -10,7 +10,7 @@ const NewsSection = () => {
         <hr />
       </Container>
 
-      <Container className='d-flex gap-4 overflow-x-auto'>
+      <Container id='newsBox' className='d-flex gap-4 overflow-x-auto'>
         <NewsElement
           description='Rilassati, al resto pensiamo noi. Ascolta Apple Music Chill'
           imgUrl='../../public/assets/images/1a.png'

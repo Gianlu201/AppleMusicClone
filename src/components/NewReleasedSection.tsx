@@ -30,9 +30,9 @@ const NewReleasedSection = () => {
 
   return (
     <Container className='mt-4'>
-      <h2>
-        Nuove uscite <ChevronRight />
-      </h2>
+      <h5 className='mb-2 d-flex align-items-baseline'>
+        Nuove uscite <ChevronRight className='h6 ms-2' />
+      </h5>
 
       <Row xs={3} lg={5}>
         {songs.map((song) => {

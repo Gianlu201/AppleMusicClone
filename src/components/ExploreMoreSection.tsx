@@ -4,7 +4,7 @@ import ExploreOption from './ExploreOption';
 const ExploreMoreSection = () => {
   return (
     <Container>
-      <h2>Altro da esplorare</h2>
+      <h5>Altro da esplorare</h5>
       <Row className='mt-3'>
         <ExploreOption title='Esplora per generi' />
         <ExploreOption title='Decenni' />
