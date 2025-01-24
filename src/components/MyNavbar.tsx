@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button, Form, ListGroup, Navbar, Offcanvas } from 'react-bootstrap';
 import { List } from 'react-bootstrap-icons';
+import SideBar from './SideBar';
 
 const MyNavbar = () => {
   const [show, setShow] = useState(false);
@@ -31,7 +32,9 @@ const MyNavbar = () => {
         </a>
       </div>
 
-      <Offcanvas show={show} onHide={handleClose}>
+      <SideBar show={show} handleClose={handleClose} />
+
+      {/* <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header
           closeButton
           className='text-white'
@@ -55,7 +58,7 @@ const MyNavbar = () => {
             <ListGroup.Item className='border-0'>Radio</ListGroup.Item>
           </ListGroup>
         </Offcanvas.Body>
-      </Offcanvas>
+      </Offcanvas> */}
     </Navbar>
   );
 };
