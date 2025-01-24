@@ -1,4 +1,4 @@
-import { PlayFill, SkipForwardFill } from 'react-bootstrap-icons';
+import { FastForwardFill, PlayFill } from 'react-bootstrap-icons';
 
 const MobilePlayer = () => {
   return (
@@ -19,7 +19,7 @@ const MobilePlayer = () => {
 
       <div className='me-3'>
         <PlayFill className='playerBtn me-2 display-1' />
-        <SkipForwardFill className='playerBtn me-2 fs-3' />
+        <FastForwardFill className='playerBtn me-2 fs-3' />
       </div>
     </div>
   );
