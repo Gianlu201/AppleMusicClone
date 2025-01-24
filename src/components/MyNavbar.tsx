@@ -1,64 +1,61 @@
-import { useState } from 'react';
-import { Button, Form, ListGroup, Navbar, Offcanvas } from 'react-bootstrap';
-import { List } from 'react-bootstrap-icons';
-import SideBar from './SideBar';
+import { Button, Navbar } from 'react-bootstrap';
+import { List, PersonFill } from 'react-bootstrap-icons';
+import MusicPlayer from './MusicPlayer';
+import VolumeControl from './VolumeControl';
 
-const MyNavbar = () => {
-  const [show, setShow] = useState(false);
+interface MyNavbarProps {
+  show: boolean;
+  handleShow: VoidFunction;
+  handleClose: VoidFunction;
+}
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const MyNavbar = (props: MyNavbarProps) => {
   return (
-    <Navbar
-      className='d-flex justify-content-between'
-      style={{ backgroundColor: '#2E2E2E' }}
-    >
-      <div className='ms-3'>
-        <Button variant='link' onClick={handleShow}>
-          <List size={'30px'} fill='red' />
+    <Navbar style={{ backgroundColor: '#2E2E2E' }}>
+      <div className='d-lg-none d-flex justify-content-between align-items-center w-100'>
+        <div className='ms-3'>
+          <Button variant='link' onClick={props.handleShow}>
+            <List size={'30px'} fill='red' />
+          </Button>
+        </div>
+        <div>
+          <img
+            id='logo'
+            src='../../public/assets/logos/music.svg'
+            alt='apple music logo'
+          />
+        </div>
+        <div className=' me-4'>
+          <a href='#' className='text-decoration-none text-danger fw-medium'>
+            Accedi
+          </a>
+        </div>
+      </div>
+
+      <div className='d-none d-lg-flex justify-content-around w-100 '>
+        <MusicPlayer />
+
+        <div
+          className='text-center'
+          style={{ width: '40%', backgroundColor: '#4D4D4D' }}
+        >
+          <img
+            src='../../public/assets/logos/apple.svg'
+            alt='apple logo'
+            className='my-2'
+          />
+        </div>
+
+        <VolumeControl />
+
+        <Button
+          className='btn-sm d-flex align-items-center fw-semibold'
+          variant='danger'
+        >
+          <PersonFill className='me-1' />
+          Accedi
         </Button>
       </div>
-      <div>
-        <img
-          id='logo'
-          src='../../public/assets/logos/music.svg'
-          alt='apple music logo'
-        />
-      </div>
-      <div className=' me-4'>
-        <a href='#' className='text-decoration-none text-danger fw-medium'>
-          Accedi
-        </a>
-      </div>
-
-      <SideBar show={show} handleClose={handleClose} />
-
-      {/* <Offcanvas show={show} onHide={handleClose}>
-        <Offcanvas.Header
-          closeButton
-          className='text-white'
-          style={{ backgroundColor: '#252526' }}
-        >
-          <Offcanvas.Title>Responsive offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body
-          className='text-white'
-          style={{ backgroundColor: '#252526' }}
-        >
-          <Form>
-            <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
-              <Form.Control type='text' placeholder='Cerca' />
-            </Form.Group>
-          </Form>
-
-          <ListGroup variant='flush'>
-            <ListGroup.Item className='border-0'>Home</ListGroup.Item>
-            <ListGroup.Item className='border-0'>Novità</ListGroup.Item>
-            <ListGroup.Item className='border-0'>Radio</ListGroup.Item>
-          </ListGroup>
-        </Offcanvas.Body>
-      </Offcanvas> */}
     </Navbar>
   );
 };
