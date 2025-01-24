@@ -98,3 +98,12 @@ footer {
 footer .special {
   color: #848484 !important;
 }
+
+#mobilePlayer {
+  width: 80%;
+  background-color: #252525;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
