@@ -1,50 +1,117 @@
-# React + TypeScript + Vite
+# Apple Music Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Apple Music Clone** — replica grafica della pagina di ascolto di Apple Music, realizzata come progetto didattico per mettere in pratica conoscenze su **React + TypeScript + Vite**.  
+L'interfaccia mostra una pagina di ascolto (player, lista brani/album, artwork) usando immagini degli album inserite in modo **statico** nella cartella `public/assets/images` e brani musicali recuperati dall'API Deezer di Strive.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Descrizione
+Questo progetto è un esercizio front-end: l'obiettivo è ricreare fedelmente (a livello grafico e di layout) la sezione di riproduzione di Apple Music — con player, copertine album, playlist e controlli. Non integra playback reale via streaming; i brani e le copertine sono **statici** e servono esclusivamente a scopo didattico per esercitarsi con React, TypeScript e il flusso dati lato client.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Caratteristiche principali
+- Interfaccia (UI) responsive che ricrea la pagina *Now Playing* / *Listen* di Apple Music.
+- Player statico con controlli base (play/pause, progress bar visiva, skip precedente/successivo).
+- Griglia/lista di album e brani.
+- Componenti React modulari (Player, AlbumCard, Sidebar, TrackList, Header).
+- Uso di TypeScript per typing dei dati (Album, Track, PlayerState).
+- Stili realizzati con CSS.
+- Progetto pensato per essere semplice da estendere e usare come base per ulteriori esercitazioni.
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech stack
+- React (Functional components + Hooks)  
+- TypeScript  
+- Vite 
+- CSS
+- Bootstrap
+- Chiamate API
+
+---
+
+## Struttura del progetto
+```
+/public
+  /assets
+    /albums
+      album-01.jpg
+      album-02.jpg
+    favicon.ico
+/src
+  /components
+    Header.tsx
+    Sidebar.tsx
+    Player.tsx
+    AlbumCard.tsx
+    TrackList.tsx
+  /pages
+    Home.tsx
+  /data
+    albums.ts           // dati statici: lista album + tracce
+  /styles
+    globals.css
+    player.css
+  main.tsx
+  App.tsx
+vite.config.ts
+tsconfig.json
+package.json
+README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Come avviare il progetto (locale)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+1. Clona la repo:
+```bash
+git clone https://github.com/Gianlu201/AppleMusicClone.git
+cd AppleMusicClone
 ```
+
+2. Installa le dipendenze:
+```bash
+npm install
+# oppure
+# yarn
+```
+
+3. Avvia il dev server:
+```bash
+npm run dev
+# (o `yarn dev`)
+```
+
+4. Apri il browser su `http://localhost:5173` (o la porta indicata dal terminale).
+
+Per build di produzione:
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Tipi e interfaccia TypeScript
+```ts
+export interface Track {
+  id: string;
+  title: string;
+  duration: string;
+}
+
+export interface Album {
+  id: string;
+  title: string;
+  artist: string;
+  cover: string;
+  tracks: Track[];
+}
+```
+
+---
+
+## Crediti
+Progetto sviluppato da **Gianlu201** come esercizio.  
