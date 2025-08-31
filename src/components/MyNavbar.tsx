@@ -19,11 +19,7 @@ const MyNavbar = (props: MyNavbarProps) => {
           </Button>
         </div>
         <div>
-          <img
-            id='logo'
-            src='../../public/assets/logos/music.svg'
-            alt='apple music logo'
-          />
+          <img id='logo' src='/assets/logos/music.svg' alt='apple music logo' />
         </div>
         <div className=' me-4'>
           <a href='#' className='text-decoration-none text-danger fw-medium'>
@@ -40,7 +36,7 @@ const MyNavbar = (props: MyNavbarProps) => {
           style={{ width: '40%', backgroundColor: '#4D4D4D' }}
         >
           <img
-            src='../../public/assets/logos/apple.svg'
+            src='/assets/logos/apple.svg'
             alt='apple logo'
             className='my-2'
           />

@@ -17,10 +17,7 @@ const SideBar = (props: SideBarProps) => {
         style={{ padding: '32px 30px' }}
       >
         <div>
-          <img
-            src='../../public/assets/logos/music.svg'
-            alt='apple music logo'
-          />
+          <img src='/assets/logos/music.svg' alt='apple music logo' />
         </div>
         <Form
           className='mt-4'
@@ -64,10 +61,7 @@ const SideBar = (props: SideBarProps) => {
             onClick={() => props.handleClose()}
           >
             <Offcanvas.Title>
-              <img
-                src='../../public/assets/logos/music.svg'
-                alt='apple music logo'
-              />
+              <img src='/assets/logos/music.svg' alt='apple music logo' />
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body

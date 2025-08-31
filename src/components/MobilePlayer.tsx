@@ -11,7 +11,7 @@ const MobilePlayer = () => {
         style={{ width: '50px' }}
       >
         <img
-          src='../../public/assets/images/music.png'
+          src='/assets/images/music.png'
           alt='ecdcomi'
           className=' img-fluid'
         />
