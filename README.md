@@ -10,6 +10,11 @@ Questo progetto è un esercizio front-end: l'obiettivo è ricreare fedelmente (a
 
 ---
 
+## Demo
+Demo disponibile al seguente [link](https://apple-music-clone-nine.vercel.app/)!
+
+---
+
 ## Caratteristiche principali
 - Interfaccia (UI) responsive che ricrea la pagina *Now Playing* / *Listen* di Apple Music.
 - Player statico con controlli base (play/pause, progress bar visiva, skip precedente/successivo).
